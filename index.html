@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Robot Car - Accueil</title>
+
+    <style>
+
+        /* ==========================
+           STYLE GENERAL DU SITE
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #101827;
+            color: #f1f5f9;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* ==========================
+           BARRE DE NAVIGATION
+        ========================== */
+
+        header {
+            background-color: #172337;
+            padding: 20px 5%;
+            border-bottom: 2px solid #2589e8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #38a5ff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #f1f5f9;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38a5ff;
+        }
+
+        /* ==========================
+           SECTION PRINCIPALE
+        ========================== */
+
+        .accueil {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .accueil h1 {
+            font-size: 42px;
+            color: #38a5ff;
+            margin-bottom: 15px;
+        }
+
+        .accueil h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto 35px;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* ==========================
+           IMAGE PRINCIPALE
+        ========================== */
+
+        .image-principale {
+            max-width: 850px;
+            height: 350px;
+            margin: 0 auto;
+            background-color: #26364d;
+            border: 2px dashed #38a5ff;
+            border-radius: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #cbd5e1;
+            font-size: 18px;
+            overflow: hidden;
+        }
+
+        .image-principale img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* ==========================
+           SECTION PRESENTATION
+        ========================== */
+
+        .presentation {
+            background-color: #172337;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .presentation h2 {
+            color: #38a5ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .presentation p {
+            max-width: 800px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        /* ==========================
+           PIED DE PAGE
+        ========================== */
+
+        footer {
+            background-color: #0b1220;
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* ==========================
+           ADAPTATION MOBILE
+        ========================== */
+
+        @media screen and (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .accueil h1 {
+                font-size: 30px;
+            }
+
+            .accueil h2 {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .image-principale {
+                height: 250px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================
+         BARRE DE NAVIGATION
+    ========================== -->
+
+    <header>
+        <nav>
+
+            <!-- Nom du projet -->
+            <div class="logo">
+                ROBOT CAR
+            </div>
+
+            <!-- Liens vers les différentes pages -->
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="equipe.html">L’équipe</a></li>
+                <li><a href="realisation.html">Réalisation</a></li>
+                <li><a href="difficultes.html">Difficultés</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="telechargements.html">Téléchargements</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ==========================
+         CONTENU PRINCIPAL
+    ========================== -->
+
+    <main>
+
+        <section class="accueil">
+
+            <!-- Titre du projet -->
+            <h1>ROBOT CAR</h1>
+
+            <h2>Bienvenue sur notre projet !</h2>
+
+            <!-- Description du prototype -->
+            <p class="description">
+                Dans le cadre de notre formation Bac Pro CIEL,
+                nous avons conçu un prototype de voiture robotisée.
+                Notre Robot Car est un véhicule miniature capable
+                de se déplacer grâce à des moteurs électriques
+                pilotés par une carte électronique programmable.
+                Il utilise différents composants électroniques
+                pour assurer son fonctionnement et réaliser
+                les déplacements demandés.
+            </p>
+
+            <!-- Emplacement de l'image principale -->
+            <div class="image-principale">
+
+                <!-- Remplacer par le chemin de votre image -->
+                <!-- Exemple : images/imgRobotCar.jpg -->
+
+                <img
+                    src="images/imgRobotCar.jpg"
+                    alt="Photo de notre prototype Robot Car"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- Présentation complémentaire -->
+
+        <section class="presentation">
+
+            <h2>À propos du projet</h2>
+
+            <p>
+                Ce projet nous permet de mettre en pratique
+                nos compétences en électronique, programmation,
+                câblage et développement informatique.
+                L'objectif est de concevoir un prototype fonctionnel
+                tout en découvrant les différentes étapes
+                de réalisation d'un système embarqué.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================
+         PIED DE PAGE
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Projet Robot Car - Bac Pro CIEL
+        </p>
+
+        <p>
+            Année scolaire 2026-2027
+        </p>
+
+    </footer>
+
+</body>
+</html>

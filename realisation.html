@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Réalisation - Robot Arduino</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #1e293b;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul a:hover,
+        nav ul a.active {
+            color: #38bdf8;
+        }
+
+        /* CONTENU */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #1e293b;
+            border-left: 5px solid #38bdf8;
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* GALERIE */
+        .gallery {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: contain;
+            background: white;
+        }
+
+        .photo-card h3 {
+            padding: 10px 15px 5px;
+        }
+
+        .photo-card p {
+            padding: 0 15px 15px;
+            color: #64748b;
+        }
+
+        /* SCHEMA */
+        .schema-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .schema-box img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .schema-placeholder {
+            margin-top: 20px;
+            padding: 55px 20px;
+            border: 2px dashed #94a3b8;
+            background: #f8fafc;
+            border-radius: 8px;
+            color: #64748b;
+        }
+
+        /* CODE ARDUINO */
+        .code-editor {
+            background: #17202c;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 10px;
+            overflow-x: auto;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .code-editor pre {
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .comment {
+            color: #7ddc83;
+        }
+
+        .keyword {
+            color: #60a5fa;
+        }
+
+        .function {
+            color: #facc15;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- BARRE DE NAVIGATION -->
+<nav>
+
+    <div class="logo">Robot Arduino</div>
+
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="realisation.html" class="active">Réalisation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+<main class="container">
+
+    <h1>Réalisation de notre robot Arduino</h1>
+
+    <p class="intro">
+        Découvrez les différentes étapes de construction,
+        le montage électronique et la programmation
+        de notre voiture robotisée.
+    </p>
+
+    <!-- 1. ETAPES DE REALISATION -->
+    <section>
+
+        <h2>1. Les étapes de réalisation</h2>
+
+        <div class="gallery">
+
+            <div class="photo-card">
+
+                <img src="images/etape1.jpg"
+                     alt="Préparation des composants">
+
+                <h3>Étape 1 : Préparation</h3>
+
+                <p>
+                    Préparation du châssis, des quatre roues,
+                    des moteurs et des composants électroniques.
+                </p>
+
+            </div>
+
+            <div class="photo-card">
+
+                <img src="images/etape2.jpg"
+                     alt="Installation des composants">
+
+                <h3>Étape 2 : Assemblage</h3>
+
+                <p>
+                    Installation de la carte Arduino,
+                    du capteur ultrasonique, de la caméra
+                    et des connexions électriques.
+                </p>
+
+            </div>
+
+            <div class="photo-card">
+
+                <img src="images/etape3.jpg"
+                     alt="Robot Arduino terminé">
+
+                <h3>Étape 3 : Tests</h3>
+
+                <p>
+                    Vérification des moteurs, des capteurs
+                    et du fonctionnement général du robot.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 2. PHOTO DU ROBOT -->
+    <section>
+
+        <h2>2. Présentation du robot terminé</h2>
+
+        <div class="schema-box">
+
+            <img src="images/robot-principal.jpg"
+                 alt="Voiture robotisée Arduino à quatre roues"
+                 style="max-width: 450px;">
+
+            <p>
+                Notre robot mobile possède quatre roues,
+                un capteur ultrasonique pour détecter
+                les obstacles et une caméra.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- 3. SCHEMA DE CABLAGE -->
+    <section>
+
+        <h2>3. Schéma de câblage</h2>
+
+        <div class="schema-box">
+
+            <p>
+                Le schéma ci-dessous présente les connexions
+                entre la carte de commande, les moteurs,
+                les capteurs et l'alimentation.
+            </p>
+
+            <img src="images/schema-cablage.png"
+                 alt="Schéma électrique du robot Arduino"
+                 onerror="this.style.display='none';
+                 document.getElementById('placeholder')
+                 .style.display='block';">
+
+            <div id="placeholder"
+                 class="schema-placeholder">
+
+                <p>
+                    Emplacement réservé au schéma
+                    de câblage du robot.
+                </p>
+
+                <p>
+                    Ajouter : images/schema-cablage.png
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 4. PROGRAMMATION -->
+    <section>
+
+        <h2>4. Programmation Arduino</h2>
+
+        <p style="margin-bottom: 15px;">
+
+            Voici un extrait de programme permettant
+            de mesurer la distance entre le robot
+            et un obstacle grâce au capteur ultrasonique.
+
+        </p>
+
+        <div class="code-editor">
+
+<pre><code><span class="comment">// Déclaration des broches du capteur</span>
+<span class="keyword">const int</span> trigPin = 9;
+<span class="keyword">const int</span> echoPin = 10;
+
+<span class="keyword">long</span> duree;
+<span class="keyword">float</span> distance;
+
+<span class="comment">// Initialisation du capteur</span>
+<span class="keyword">void</span> <span class="function">setup</span>() {
+
+    pinMode(trigPin, OUTPUT);
+    pinMode(echoPin, INPUT);
+
+    <span class="comment">// Démarrage de la communication série</span>
+    Serial.begin(9600);
+
+}
+
+<span class="comment">// Mesure de la distance en boucle</span>
+<span class="keyword">void</span> <span class="function">loop</span>() {
+
+    <span class="comment">// Envoi d'une impulsion ultrasonique</span>
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+
+    digitalWrite(trigPin, LOW);
+
+    <span class="comment">// Lecture du signal de retour</span>
+    duree = pulseIn(echoPin, HIGH);
+
+    <span class="comment">// Calcul de la distance en centimètres</span>
+    distance = duree * 0.0343 / 2;
+
+    <span class="comment">// Affichage de la distance</span>
+    Serial.print("Distance : ");
+    Serial.print(distance);
+    Serial.println(" cm");
+
+    delay(200);
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        &copy; 2026 - Projet Robot Arduino
+        | Tous droits réservés
+    </p>
+
+</footer>
+
+</body>
+</html>
